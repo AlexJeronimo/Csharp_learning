@@ -6,8 +6,8 @@ namespace ConsoleApp1
     {
         static void Main()
         {
+           
 
-            
         }
 
         static void Variables()
@@ -53,6 +53,26 @@ namespace ConsoleApp1
             Console.WriteLine('\u0420');
             Console.WriteLine('\u0421');
             Console.WriteLine();
+        }
+
+        static void Scope()
+        {
+            var a = 1;
+            {
+                var b = 2;
+                {
+                    var c = 3;
+                    Console.WriteLine(a);
+                    Console.WriteLine(b);
+                    Console.WriteLine(c);
+                }
+                Console.WriteLine(a);
+                Console.WriteLine(b);
+                //Console.WriteLine(c);
+            }
+            Console.WriteLine(a);
+            //Console.WriteLine(b);
+            //Console.WriteLine(c);
         }
     }
 }
