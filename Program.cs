@@ -7,6 +7,7 @@ namespace ConsoleApp1
         static void Main()
         {
             
+            
 
 
         }
@@ -153,11 +154,33 @@ namespace ConsoleApp1
             a = 2 + 2 * 2;
             Console.WriteLine(a);
 
+            a = (2 + 2) * 2;
+            Console.WriteLine(a);
+
             a *= 2;
             //a = a * 2;
 
             a /= 2;
             //a = a / 2;
+        }
+        static void ComparisonOperators()
+        {
+            int x = 1;
+            int y = 2;
+
+            bool areEqual = x == y;
+            Console.WriteLine(areEqual);
+
+            bool result = x > y;
+            Console.WriteLine(result);
+            result = x >= y;
+            Console.WriteLine(result);
+            result = x < y;
+            Console.WriteLine(result);
+            result = x <= y;
+            Console.WriteLine(result);
+            result = x != y;
+            Console.WriteLine(result);
         }
     }
 }
