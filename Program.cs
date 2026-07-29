@@ -19,5 +19,40 @@ namespace ConsoleApp1
 
             Console.WriteLine("x = {0}, y = {1}", Convert.ToString(x), Convert.ToString(y));
         }
+
+        static void Literals()
+        {
+            int x = 0b11;
+            int y = 0b1001;
+            int k = 0b10011001;
+            int m = 0b1001_1001;
+
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(k);
+            Console.WriteLine(m);
+            Console.WriteLine();
+
+            x = 0x1F;
+            y = 0xFF0D;
+            k = 0x1FAB30EF;
+            m = 0x1FAB_30EF;
+
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(k);
+            Console.WriteLine(m);
+            Console.WriteLine();
+
+            Console.WriteLine(4.5e2);
+            Console.WriteLine(3.1E-1);
+            Console.WriteLine();
+
+            Console.WriteLine('\x78');
+            Console.WriteLine('\x5A');
+            Console.WriteLine('\u0420');
+            Console.WriteLine('\u0421');
+            Console.WriteLine();
+        }
     }
 }
