@@ -1,10 +1,12 @@
-﻿namespace ConsoleApp1
+﻿using System;
+
+namespace ConsoleApp1
 {
     class Program
     {
         static void Main()
         {
-            Console.Write("booooya");
+            Console.WriteLine("booooya");
         }
     }
 }
