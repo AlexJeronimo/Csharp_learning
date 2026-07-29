@@ -6,8 +6,8 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-           
-
+            
+            
         }
 
         static void Variables()
@@ -73,6 +73,18 @@ namespace ConsoleApp1
             Console.WriteLine(a);
             //Console.WriteLine(b);
             //Console.WriteLine(c);
+        }
+        static void Overflow()
+        {
+            checked
+            {
+                uint x = uint.MaxValue;
+                Console.WriteLine(x);
+                x = x + 1;
+                Console.WriteLine(x);
+                x = x - 1;
+                Console.WriteLine(x);
+            }
         }
     }
 }
