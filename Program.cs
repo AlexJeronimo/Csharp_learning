@@ -7,9 +7,6 @@ namespace ConsoleApp1
         static void Main()
         {
             
-            
-
-
         }
 
         static void Variables()
@@ -181,6 +178,88 @@ namespace ConsoleApp1
             Console.WriteLine(result);
             result = x != y;
             Console.WriteLine(result);
+        }
+        static void StaticNAdInstancveMembers()
+        {
+            string name = "abracadabra";
+            //string name = new string("abracadabra");
+            bool containsA = name.Contains('a');
+            bool containsE = name.Contains('e');
+
+            Console.WriteLine(containsA);
+            Console.WriteLine(containsE);
+
+            string abc = string.Concat("a", "b", "c");
+            Console.WriteLine(abc);
+
+            Console.WriteLine(int.MinValue);
+
+            int x = 1;
+            string xStr = x.ToString();
+            Console.WriteLine(x);
+            Console.WriteLine(xStr);
+        }
+        static void QueryingStrings()
+        {
+            string name = "abracadabra";
+            bool containsA = name.Contains('a');
+            bool containsE = name.Contains('E');
+
+            Console.WriteLine(containsA);
+            Console.WriteLine(containsE);
+
+            bool endsWithAbra = name.EndsWith("abra");
+            Console.WriteLine(endsWithAbra);
+
+            bool startsWithAbra = name.StartsWith("abra");
+            Console.WriteLine(startsWithAbra);
+
+            int indexOfA = name.IndexOf('a', 1); //3 indexing starts from 0
+            Console.WriteLine(indexOfA);
+            int lastIndexOfR = name.LastIndexOf('r'); //9
+            Console.WriteLine(lastIndexOfR);
+
+            Console.WriteLine(name.Length); //11 length is the number of characters in string
+
+            string substrFrom5 = name.Substring(5);
+            string substrFromTo = name.Substring(0, 3);
+
+            Console.WriteLine(substrFrom5);
+            Console.WriteLine(substrFromTo);
+        }
+        static void StringEmptines()
+        {
+            string empty = "";
+            string whiteSpaced = " ";
+            string notEmpty = " b";
+            string nullString = null;
+
+            Console.WriteLine("IsNullOrEmpty");
+            bool isNullOrEmpty = string.IsNullOrEmpty(nullString);
+            Console.WriteLine(isNullOrEmpty);
+
+            isNullOrEmpty = string.IsNullOrEmpty(whiteSpaced);
+            Console.WriteLine(isNullOrEmpty);
+
+            isNullOrEmpty = string.IsNullOrEmpty(notEmpty);
+            Console.WriteLine(isNullOrEmpty);
+
+            isNullOrEmpty = string.IsNullOrEmpty(empty);
+            Console.WriteLine(isNullOrEmpty);
+
+
+            Console.WriteLine("IsNullOrWhiteSpace");
+            bool isNullOrWhiteSpace = string.IsNullOrWhiteSpace(nullString);
+            Console.WriteLine(isNullOrWhiteSpace);
+
+            isNullOrWhiteSpace = string.IsNullOrWhiteSpace(whiteSpaced);
+            Console.WriteLine(isNullOrWhiteSpace);
+
+            isNullOrWhiteSpace = string.IsNullOrWhiteSpace(notEmpty);
+            Console.WriteLine(isNullOrWhiteSpace);
+
+            isNullOrWhiteSpace = string.IsNullOrWhiteSpace(empty);
+            Console.WriteLine(isNullOrWhiteSpace);
         }
     }
 }
