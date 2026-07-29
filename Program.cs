@@ -6,8 +6,9 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-
             
+
+
         }
 
         static void Variables()
@@ -117,6 +118,46 @@ namespace ConsoleApp1
             //x = x + 2;
             j -= 2;
             //j = j - 2;
+        }
+        static void MathOperations()
+        {
+            int x = 1;
+            int y = 2;
+
+            int z = x + y;
+            int k = x - y;
+            int a = z + k - y;
+
+            Console.WriteLine(z);
+            Console.WriteLine(k);
+            Console.WriteLine(a);
+
+            int b = z * 2;
+            int c = k / 2;
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+
+            a = 4 % 2;
+            b = 5 % 2;
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
+            a = 3;
+            b = 3;
+            a = a * a;
+            b = b * b * b;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
+            a = 2 + 2 * 2;
+            Console.WriteLine(a);
+
+            a *= 2;
+            //a = a * 2;
+
+            a /= 2;
+            //a = a / 2;
         }
     }
 }
