@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            
+
             
         }
 
@@ -85,6 +85,38 @@ namespace ConsoleApp1
                 x = x - 1;
                 Console.WriteLine(x);
             }
+        }
+        static void IncrementDecrementDemo()
+        {
+            int x = 1;
+            x = x + 1;
+            Console.WriteLine(x);
+            x++; //postfix
+            Console.WriteLine(x);
+            ++x; //infix/prefix
+            Console.WriteLine(x);
+            x = x - 1;
+            Console.WriteLine(x);
+            x--;
+            Console.WriteLine(x);
+            --x;
+            Console.WriteLine(x);
+
+            Console.WriteLine("Learn about increments");
+            Console.WriteLine($"Last x state is {x}");
+
+            int j = x++;
+            Console.WriteLine(j);
+            Console.WriteLine(x);
+
+            j = ++x;
+            Console.WriteLine(j);
+            Console.WriteLine(x);
+
+            x += 2;
+            //x = x + 2;
+            j -= 2;
+            //j = j - 2;
         }
     }
 }
