@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace ConsoleApp1
 {
@@ -7,6 +8,7 @@ namespace ConsoleApp1
         static void Main()
         {
             
+
         }
 
         static void Variables()
@@ -18,7 +20,6 @@ namespace ConsoleApp1
 
             Console.WriteLine("x = {0}, y = {1}", Convert.ToString(x), Convert.ToString(y));
         }
-
         static void Literals()
         {
             int x = 0b11;
@@ -53,7 +54,6 @@ namespace ConsoleApp1
             Console.WriteLine('\u0421');
             Console.WriteLine();
         }
-
         static void Scope()
         {
             var a = 1;
@@ -234,6 +234,10 @@ namespace ConsoleApp1
             string notEmpty = " b";
             string nullString = null;
 
+            string str = string.Empty;
+            //string str = "";
+            Console.WriteLine(str);
+
             Console.WriteLine("IsNullOrEmpty");
             bool isNullOrEmpty = string.IsNullOrEmpty(nullString);
             Console.WriteLine(isNullOrEmpty);
@@ -261,5 +265,103 @@ namespace ConsoleApp1
             isNullOrWhiteSpace = string.IsNullOrWhiteSpace(empty);
             Console.WriteLine(isNullOrWhiteSpace);
         }
+        static void StringModification()
+        {
+            string nameConcat = string.Concat("My ", "name ", "is ", "Alex");
+            Console.WriteLine(nameConcat);
+            nameConcat = string.Join(" ", "My", "name", "is", "Alex");
+            Console.WriteLine(nameConcat);
+
+            //string newName = 
+            nameConcat = nameConcat.Insert(0, "By the way, ");
+            Console.WriteLine(nameConcat);
+
+            nameConcat = nameConcat.Remove(0, 1);
+            Console.WriteLine(nameConcat);
+
+            string replaced = nameConcat.Replace('n', 'z');
+            Console.WriteLine(replaced);
+
+            string data = "12;38;43;32;19";
+            string[] splitData = data.Split(';');
+            string first = splitData[0];
+            Console.WriteLine(first);
+
+            char[] chars = nameConcat.ToCharArray();
+            Console.WriteLine(chars[0]);
+            Console.WriteLine(nameConcat[0]);
+        }
+        static void StringBuildferDemo() 
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("My ");
+            sb.Append("name ");
+            sb.Append("is ");
+            sb.Append("Alex");
+            sb.AppendLine("!");
+            sb.AppendLine("Hello!");
+
+            string str = sb.ToString();
+            Console.WriteLine(str);
+        }
+        static void StringFormat()
+        {
+            string name = "Alex";
+            int age = 38;
+            string str1 = string.Format("My name is {0} and I'm {1}.", name, age);
+            string str2 = "My name is " + name + " and I'm " + age + ".";
+            string str1_2 = $"My name is {name} and I'm {age}.";
+            Console.WriteLine(str1);
+            Console.WriteLine(str2);
+            Console.WriteLine(str1_2);
+
+            string str3 = "My name is \nAlex";
+            string str4 = "I am \t38.";
+            Console.WriteLine(str3);
+            Console.WriteLine(str4);
+
+            str3 = $"My name is {Environment.NewLine}Alex"; //\t
+            Console.WriteLine(str3);
+
+            string str5 = "I'm John and I'm \"good\" programmer";
+            Console.WriteLine(str5);
+
+            string str6 = "C:\\tmp\\test\\file.txt";
+            Console.WriteLine(str6);
+            string str6_1 = @"C:\tmp\test\file.txt";
+            Console.WriteLine(str6_1);
+
+            Console.WriteLine();
+
+            int answer = 42;
+            string result = string.Format("{0:d}", answer);
+            string result2 = string.Format("{0:d4}", answer);
+            Console.WriteLine(result);
+            Console.WriteLine(result2);
+
+            result = string.Format("{0:f}", answer);
+            result2 = string.Format("{0:f4}", answer);
+            Console.WriteLine(result);
+            Console.WriteLine(result2);
+
+            double answer2 = 42.08;
+
+            result = string.Format("{0:f}", answer2);
+            result2 = string.Format("{0:f1}", answer2);
+            Console.WriteLine(result);
+            Console.WriteLine(result2);
+
+            Console.OutputEncoding = Encoding.UTF8;
+
+            double money = 12.8;
+            result = string.Format("{0:C}", money); // C - currency, get your system cyrrency to output its sign
+            result2 = string.Format("{0:C4}", money);
+            Console.WriteLine(result);
+            Console.WriteLine(result2);
+            Console.WriteLine(money.ToString("C2"));
+            result = $"{money:C2}";
+            Console.WriteLine(result);
+        }
+
     }
 }
