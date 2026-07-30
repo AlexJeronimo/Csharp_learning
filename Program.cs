@@ -7,8 +7,8 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            
 
+            
         }
 
         static void Variables()
@@ -362,6 +362,47 @@ namespace ConsoleApp1
             result = $"{money:C2}";
             Console.WriteLine(result);
         }
+        static void ComparingStrings()
+        {
+            string str1 = "abcde";
+            string str2 = "abcde";
 
+            bool areEqual = str1 == str2;
+            Console.WriteLine(areEqual);
+
+            areEqual = string.Equals(str1, str2, StringComparison.Ordinal);
+            Console.WriteLine(areEqual);
+
+            Console.WriteLine();
+
+            string s1 = "Strasse";
+            string s2 = "Straße";
+            areEqual = string.Equals(s1, s2, StringComparison.Ordinal); //use by default
+            Console.WriteLine(areEqual);
+            areEqual = string.Equals(s1, s2, StringComparison.InvariantCulture);
+            Console.WriteLine(areEqual);
+            areEqual = string.Equals(s1, s2, StringComparison.CurrentCulture);
+            Console.WriteLine(areEqual);
+        }
+        static void ConsoleBasics()
+        {
+            //Console.WriteLine("Hi, please tell me your name: ");
+            //string name = Console.ReadLine();
+            //string sentance = $"Your name is {name}";
+            //Console.WriteLine(sentance);
+
+            Console.WriteLine("Hi, tell em your age: ");
+            string input = Console.ReadLine();
+            int age = int.Parse(input);
+            string sentance = $"Your age is {age}";
+            Console.WriteLine(sentance);
+
+
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+
+            Console.WriteLine("New Style");
+        }
     }
 }
