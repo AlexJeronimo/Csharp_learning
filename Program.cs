@@ -8,7 +8,6 @@ namespace ConsoleApp1
         static void Main()
         {
             
-
         }
 
         static void Variables()
@@ -497,6 +496,83 @@ namespace ConsoleApp1
             Console.WriteLine(first);
             Console.WriteLine(last);
         }
+        void DateTimeIntro()
+        {
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now.ToString());
+            Console.WriteLine($"It's {now.ToShortDateString()}, {now.Hour}:{now.Minute}");
 
+            DateTime dt = new DateTime(2016, 2, 28);
+            DateTime newDt = dt.AddDays(1);
+            DateTime newDt2 = dt.AddDays(2);
+            Console.WriteLine(newDt);
+            Console.WriteLine(newDt2);
+
+            Console.WriteLine();
+
+            TimeSpan ts = now - dt;
+            Console.WriteLine(ts.Days);
+            ts = now.Subtract(dt);
+            Console.WriteLine(ts.Days);
+        }
+        void HW1()
+        {
+            Console.WriteLine("Enetr your name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello, {name}");
+
+            Console.WriteLine("PLease neter 2 numbers: ");
+            Console.WriteLine("Number 1: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Number 2: ");
+            int y = int.Parse(Console.ReadLine());
+            Console.WriteLine($"X: {x}, Y: {y}");
+            int c = x;
+            x = y;
+            y = c;
+            Console.WriteLine($"X: {x}, Y: {y}");
+
+            Console.WriteLine("Enetr number: ");
+            string l = Console.ReadLine();
+            Console.WriteLine($"Number length : {l.Length}");
+        }
+        void HW2RectangleArea()
+        {
+            Console.WriteLine("Enter length of first side of triangle: ");
+            double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter length of second side of triangle: ");
+            double b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter length of third side of triangle: ");
+            double c = double.Parse(Console.ReadLine());
+
+            double p = (a + b + c) / 2;
+
+            double S = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+            Console.WriteLine($"Triangle area: {S}");
+        }
+        void HW3BMI()
+        {
+            Console.WriteLine("Eneter your name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Eneter your second surname: ");
+            string sn = Console.ReadLine();
+
+            Console.WriteLine("Eneter your age: ");
+            int age = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Enetr your weight in kilograms: ");
+            double weight = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enetr your height in meters");
+            double height = double.Parse(Console.ReadLine());
+            double imt = weight / (height * height);
+
+            Console.WriteLine("=====Your Profile=====");
+            Console.WriteLine($"Full Name: {sn}, {name}");
+            Console.WriteLine($"Age: {age} years");
+            Console.WriteLine($"Weight: {weight} kg");
+            Console.WriteLine($"Height: {height} m");
+            Console.WriteLine($"Body Mass Index: {imt:f2}");
+        }
     }
 }
