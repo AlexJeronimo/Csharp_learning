@@ -8,6 +8,7 @@ namespace ConsoleApp1
         static void Main()
         {
             
+
         }
 
         static void Variables()
@@ -453,6 +454,48 @@ namespace ConsoleApp1
 
             //we need to tweak the index to mathc the expected outcome - good comment!
             a++; // not recommended to set comments in the code line, better is to do it abow the code line!
+        }
+        static void MathDemo()
+        {
+            Console.WriteLine(Math.Pow(2, 3));
+            Console.WriteLine(Math.Sqrt(9));
+            Console.WriteLine(Math.Sqrt(8));
+            Console.WriteLine(Math.Round(1.7));
+            Console.WriteLine(Math.Round(1.4));
+            Console.WriteLine(Math.Round(1.5));
+            Console.WriteLine();
+
+            Console.WriteLine(Math.Round(2.5));
+
+            Console.WriteLine(Math.Round(2.5, MidpointRounding.AwayFromZero));
+            Console.WriteLine(Math.Round(2.5, MidpointRounding.ToEven));
+        }
+        void IntroToArrays()
+        {
+            int[] a1;
+            a1 = new int[10];
+
+            int[] a2 = new int[5];
+
+            int[] a3 = new int[5] { 1, 2, 3, 4, 5 };
+
+            int[] a4 = { 1, 2, 3, 4, 11 };
+
+            Console.WriteLine(a4[0]);
+            int number = a4[3];
+            Console.WriteLine(number);
+            a4[3] = 7;
+            Console.WriteLine(a4[3]);
+
+            Console.WriteLine(a4.Length);
+
+            Console.WriteLine(a4[a4.Length - 1]);
+
+            string s1 = "abcdefgh";
+            char first = s1[0];
+            char last = s1[s1.Length - 1];
+            Console.WriteLine(first);
+            Console.WriteLine(last);
         }
 
     }
