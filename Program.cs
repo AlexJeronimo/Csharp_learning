@@ -7,7 +7,6 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-
             
         }
 
@@ -291,7 +290,7 @@ namespace ConsoleApp1
             Console.WriteLine(chars[0]);
             Console.WriteLine(nameConcat[0]);
         }
-        static void StringBuildferDemo() 
+        static void StringBuildferDemo()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("My ");
@@ -404,5 +403,57 @@ namespace ConsoleApp1
 
             Console.WriteLine("New Style");
         }
+        static void CastingAndParsing()
+        {
+            byte b = 3; // 0000 0011
+            int i = b; //  0000 0000 0000 0000 0000 0000 0000 0011
+            long l = i; // 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0011
+
+            Console.WriteLine(b);
+            Console.WriteLine(i);
+            Console.WriteLine(l);
+
+            float f = i; // 3.0
+            Console.WriteLine(f);
+
+            b = (byte)i;
+            Console.WriteLine(b);
+
+            i = (int)f;
+            Console.WriteLine(i);
+            Console.WriteLine();
+
+            string str = "1";
+            i = int.Parse(str);
+            Console.WriteLine(i);
+            Console.WriteLine();
+
+            int x = 5;
+            int result = x / 2;
+            Console.WriteLine(result);
+
+            double result2 = (double)x / 2;
+            Console.WriteLine(result2);
+        }
+        static void Comments()
+        {
+            // a single line comment
+
+            /*
+             * Multi
+             * line
+             * comment
+             * 
+             */
+
+            //describe how and why! not describe whats!
+
+            int a = 1;
+            //incremet a by 1 - bad comment! this code is self-evident
+
+            //we need to tweak the index to mathc the expected outcome - good comment!
+            a++; // not recommended to set comments in the code line, better is to do it abow the code line!
+        }
+
     }
 }
