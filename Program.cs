@@ -554,7 +554,7 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Eneter your name: ");
             string name = Console.ReadLine();
-            Console.WriteLine("Eneter your second surname: ");
+            Console.WriteLine("Eneter your last surname: ");
             string sn = Console.ReadLine();
 
             Console.WriteLine("Eneter your age: ");
