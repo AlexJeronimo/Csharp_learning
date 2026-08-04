@@ -1,7 +1,109 @@
 ﻿
 
+static void WhileDoWhile()
+{
+    int age = 0;
+    while (age < 18)
+    {
+        Console.WriteLine("First While loop");
+        Console.WriteLine("What is your age: ");
+        age = int.Parse(Console.ReadLine()!);
+    }
 
 
+    do
+    {
+        Console.WriteLine("Do\\While");
+        Console.WriteLine("What is your age: ");
+        age = int.Parse(Console.ReadLine()!);
+    }
+    while (age < 18);
+
+    Console.WriteLine("Good!");
+
+    int[] numbers = { 1, 2, 3, 4, 5 };
+    int i = 0;
+    while (i < numbers.Length)
+    {
+        Console.Write(numbers[i] + " ");
+        i++;
+    }
+}
+static void NestedFor()
+{
+
+    int[] numbers = { 1, -2, 4, -7, 5, 3, 2, -1, -3, 1, 7 };
+
+    for (int i = 0; i < numbers.Length - 1; i++)
+    {
+        for (int j = i + 1; j < numbers.Length; j++)
+        {
+            int atI = numbers[i];
+            int atJ = numbers[j];
+
+            if (atI + atJ == 0)
+            {
+                Console.WriteLine($"Pair ({atI};{atJ}). Indexes ({i};{j}). Sum equal 0");
+            }
+        }
+    }
+
+    Console.WriteLine();
+
+    for (int i = 0; i < numbers.Length - 2; i++)
+    {
+        for (int j = i + 1; j < numbers.Length - 1; j++)
+        {
+            for (int k = j + 1; k < numbers.Length; k++)
+            {
+                int atI = numbers[i];
+                int atJ = numbers[j];
+                int atK = numbers[k];
+
+                if (atI + atJ + atK == 0)
+                {
+                    Console.WriteLine($"Triplets ({atI};{atJ};{atK}). Indexes ({i};{j};{k}). Sum equal 0");
+                }
+            }
+
+        }
+    }
+
+}
+static void ForForeach()
+{
+    int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+
+    Console.WriteLine();
+
+    for (int i = numbers.Length - 1; i >= 0; i--)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+
+    Console.WriteLine();
+
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        if (numbers[i] % 2 == 0)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    }
+
+    Console.WriteLine();
+
+    foreach (int val in numbers)
+    {
+        Console.Write(val + " ");
+    }
+    Console.WriteLine();
+}
 static void ControlFlowIFELSE()
 {
     Console.WriteLine("Eneter your age: ");
