@@ -2,6 +2,75 @@
 
 
 
+static void HW2Phibonacci()
+{
+    Console.WriteLine("How much phibonachi number do you want to see?");
+    int numbers = int.Parse(Console.ReadLine());
+
+    ulong[] phibonacci = new ulong[numbers];
+
+    switch (numbers)
+    {
+        case 1:
+            phibonacci[0] = 1;
+            break;
+        case 2:
+            phibonacci[0] = 0;
+            phibonacci[1] = 1;
+            break;
+        default:
+            phibonacci[0] = 0;
+            phibonacci[1] = 1;
+            for (int i = 2; i < numbers; i++)
+            {
+                phibonacci[i] = phibonacci[i - 1] + phibonacci[i - 2];
+            }
+            break;
+
+    }
+
+    // Other method, more correct than mine.
+    /* ulong a0 = 0;
+     * ulong a1 = 1;
+     * fibonacci[0] = a0;
+     * fibonacci[1] = a1;
+     * 
+     * for(int i = 2; i < numbers; i++)
+     * {
+     *      int a = a0 + a1;
+     *      fibonacci[i] = a;
+     *      
+     *      a0 = a1;
+     *      a1 = a;
+     * }
+     */
+
+    foreach (ulong number in phibonacci)
+    {
+        Console.Write(number + " ");
+    }
+}
+static void DebaggingDemoExample()
+{
+    Console.WriteLine("Let's calculate area of triangle.");
+    Console.WriteLine("Enter the length of side AB:");
+    double ab = GetDouble();
+    Console.WriteLine("Enter the length of side BC:");
+    double bc = GetDouble();
+    Console.WriteLine("Enter the length of side AC:");
+    double ac = GetDouble();
+
+    double p = (ab + bc + ac) / 2;
+
+    double area = Math.Sqrt(p * (p - ab) * (p - bc) * (p - ac));
+
+    Console.WriteLine(area);
+}
+static double GetDouble()
+{
+    return double.Parse(Console.ReadLine());
+}
+
 static void SwitchCase()
 {
     Console.WriteLine("Write a month number from 1 to 12: ");
@@ -291,7 +360,7 @@ static void ControlFlowIFELSE()
 
 
 }
-static void HW2Max()
+static void HW1Max()
 {
     Console.WriteLine("Please neter 2 numbers:");
     Console.WriteLine("Fist number");

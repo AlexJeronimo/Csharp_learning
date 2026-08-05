@@ -178,7 +178,7 @@ namespace ConsoleApp1
             result = x != y;
             Console.WriteLine(result);
         }
-        static void StaticNAdInstancveMembers()
+        static void StaticAndInstanceMembers()
         {
             string name = "abracadabra";
             //string name = new string("abracadabra");
