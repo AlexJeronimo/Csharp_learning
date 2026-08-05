@@ -1,5 +1,143 @@
 ﻿
 
+
+
+static void SwitchCase()
+{
+    Console.WriteLine("Write a month number from 1 to 12: ");
+    int month = int.Parse(Console.ReadLine()!);
+    string season = string.Empty;
+    switch (month)
+    {
+        case 1:
+        case 2:
+        case 12:
+            season = "Winter";
+            break;
+
+        case 3:
+        case 4:
+        case 5:
+            season = "Spring";
+            break;
+        case 6:
+        case 7:
+        case 8:
+            season = "Summer";
+            break;
+        case 9:
+        case 10:
+        case 11:
+            season = "Autumn";
+            break;
+        default:
+            throw new ArgumentException("Unexpected number of month");
+
+    }
+    Console.WriteLine(season);
+
+    Console.WriteLine();
+
+    Console.WriteLine("How many years you are married?");
+    int weddingYears = int.Parse(Console.ReadLine()!);
+    string name = string.Empty;
+
+    switch (weddingYears)
+    {
+        case 5:
+            name = "Wooden weding";
+            break;
+        case 10:
+            name = "tin weding";
+            break;
+        case 15:
+            name = "crystal weding";
+            break;
+        case 20:
+            name = "porcelain weding";
+            break;
+        case 25:
+            name = "silver weding";
+            break;
+        case 30:
+            name = "pearl weding";
+            break;
+        default:
+            name = "Something went wrong";
+            break;
+    }
+    Console.WriteLine(name);
+}
+static void BreakContinue()
+{
+
+    int[] numbers2 = { 0, 3, 2, 1, 5, 4, 8, 7, 6, 9 };
+    foreach (int n in numbers2)
+    {
+        //if (n % 2 ==0)
+        //{
+        //    Console.WriteLine(n);
+        //}
+
+        if (n % 2 != 0)
+        {
+            continue;
+        }
+        Console.WriteLine(n);
+    }
+
+
+    Console.WriteLine();
+
+    int[] numbers1 = { 0, 3, 2, 1, 5, 4, 8, 7, 6, 9 };
+    char[] letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
+
+    for (int i = 0; i < numbers1.Length; i++)
+    {
+        Console.WriteLine($"Number={numbers1[i]}");
+
+        for (int j = 0; j < letters.Length; j++)
+        {
+            if (numbers1[i] == j)
+            {
+                break;
+            }
+            Console.Write($" {letters[j]}");
+        }
+        Console.WriteLine();
+    }
+
+
+    Console.WriteLine();
+
+    int[] numbers = { 1, -2, 4, -7, 5, 3, 2, -1, -3, 2, 7, -1, -3, 1, 7 };
+    int counter = 0;
+    for (int i = 0; i < numbers.Length - 1; i++)
+    {
+        if (counter == 3)
+        {
+            break;
+        }
+
+        for (int j = i + 1; j < numbers.Length; j++)
+        {
+            int atI = numbers[i];
+            int atJ = numbers[j];
+
+            if (atI + atJ == 0)
+            {
+                Console.WriteLine($"Pair ({atI};{atJ}). Indexes ({i};{j}). Sum equal 0");
+                counter++;
+            }
+
+            if (counter == 3)
+            {
+                break;
+            }
+
+        }
+    }
+}
 static void WhileDoWhile()
 {
     int age = 0;
@@ -32,7 +170,7 @@ static void WhileDoWhile()
 static void NestedFor()
 {
 
-    int[] numbers = { 1, -2, 4, -7, 5, 3, 2, -1, -3, 1, 7 };
+    int[] numbers = { 1, -2, 4, -7, 5, 3, 2, -1, -3, 2, 7, -1, -3, 1, 7 };
 
     for (int i = 0; i < numbers.Length - 1; i++)
     {
