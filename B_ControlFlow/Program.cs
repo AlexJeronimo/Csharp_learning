@@ -1,8 +1,82 @@
-﻿
+﻿using System.Numerics;
 
 
 
-static void HW2Phibonacci()
+
+
+
+
+
+
+
+static void HW5_Login()
+{
+    string password = "qwerty";
+    string login = "johnsilver";
+    int tries = 0;
+    while (tries <= 3)
+    {
+        Console.WriteLine("Enter login: ");
+        string userLogin = Console.ReadLine();
+
+        Console.WriteLine("Enter password: ");
+        string userPassword = Console.ReadLine();
+
+        if (userLogin == login && userPassword == password)
+        {
+            Console.WriteLine("Enter the system.");
+            break;
+        }
+        tries++;
+    }
+    if (tries == 4)
+    {
+        Console.WriteLine("You exceeded the number of available tries.");
+    }
+}
+static void HW4_Factorial()
+{
+    
+    Console.WriteLine("Enter n >= 0");
+    int n = int.Parse(Console.ReadLine());
+    BigInteger factorial = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        factorial *= i;
+    }
+    Console.WriteLine(factorial);
+}
+static void HW3_Averaqge()
+{
+    int[] numbers = new int[10];
+    int inputCount = 0;
+    while (inputCount < 10)
+    {
+        int number = int.Parse(Console.ReadLine());
+        numbers[inputCount] = number;
+        inputCount++;
+
+        if (number == 0)
+        {
+            break;
+        }
+    }
+
+    int sum = 0;
+    int count = 0;
+    foreach (int n in numbers)
+    {
+        if (n > 0 && n % 3 == 0)
+        {
+            sum += n;
+            count++;
+        }
+    }
+
+    double average = (double)sum / count;
+    Console.WriteLine(average);
+}
+static void HW2_Phibonacci()
 {
     Console.WriteLine("How much phibonachi number do you want to see?");
     int numbers = int.Parse(Console.ReadLine());
@@ -360,7 +434,7 @@ static void ControlFlowIFELSE()
 
 
 }
-static void HW1Max()
+static void HW1_Max()
 {
     Console.WriteLine("Please neter 2 numbers:");
     Console.WriteLine("Fist number");
