@@ -7,6 +7,43 @@
             
         }
 
+        static void StackQueueDemo()
+        {
+            var stack = new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+
+            Console.WriteLine($"Should print out 4: {stack.Peek()}");
+
+            Console.WriteLine($"Deleting item. Should print out 4(element which deleted): {stack.Pop()}");
+            Console.WriteLine($"Should print out 3, after delete operation: {stack.Peek()}");
+
+            Console.WriteLine("Iterate over the stack:");
+            foreach (var item in stack)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine();
+
+            var queue = new Queue<int>();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+
+            Console.WriteLine($"Should print out 1: {queue.Peek()}");
+
+            queue.Dequeue();
+            Console.WriteLine($"Should print out 2, after delete operation: {queue.Peek()}");
+
+            foreach (var item in queue)
+            {
+                Console.WriteLine(item);
+            }
+        }
         static void DictiomaryDemo()
         {
             var people = new Dictionary<int, string>();
