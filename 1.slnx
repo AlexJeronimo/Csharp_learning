@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="../C_ArraysCollections/C_ArraysCollections.csproj" Id="8ed9ccf0-31f9-49dd-90a7-feed0f99d651" />
   <Project Path="A_Basics.csproj" />
   <Project Path="B_ControlFlow/B_ControlFlow.csproj" Id="011ab1de-3ca2-45ea-96e9-f4fc9027b401" />
+  <Project Path="C_ArraysCollections/C_ArraysCollections.csproj" Id="cf02730a-295b-4e03-85f2-975f8804aa43" />
 </Solution>
