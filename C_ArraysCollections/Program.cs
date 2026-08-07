@@ -6,7 +6,72 @@
         {
             
         }
+        static void NonStandardArrayIndex()
+        {
+            Array myArray = Array.CreateInstance(typeof(int), new[] { 4 }, new[] { 1 });
+            myArray.SetValue(2023, 1);
+            myArray.SetValue(2024, 2);
+            myArray.SetValue(2025, 3);
+            myArray.SetValue(2026, 4);
 
+            Console.WriteLine($"Starting index {myArray.GetLowerBound(0)}");
+            Console.WriteLine($"Ending index {myArray.GetUpperBound(0)}");
+
+            for (int i = myArray.GetLowerBound(0); i <= myArray.GetUpperBound(0); i++)
+            {
+                Console.WriteLine($"{myArray.GetValue(i)} at index {i}");
+            }
+        }
+        static void JaggedArray()
+        {
+            int[][] jaggedArray = new int[4][];
+            jaggedArray[0] = new int[1];
+            jaggedArray[1] = new int[3];
+            jaggedArray[2] = new int[2];
+            jaggedArray[3] = new int[4];
+
+            Console.WriteLine("Enter the numbers for jagged array.");
+
+            for (int i = 0; i < jaggedArray.Length; i++)
+            {
+                for (int j = 0; j < jaggedArray[i].Length; j++)
+                {
+                    string st = Console.ReadLine()!;
+                    jaggedArray[i][j] = int.Parse(st);
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Printing the elements");
+            for (int i = 0; i < jaggedArray.Length; i++)
+            {
+                for (int j = 0; j < jaggedArray[i].Length; j++)
+                {
+                    Console.Write(jaggedArray[i][j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+        static void MultiDimentionalArray()
+        {
+            //1 2 3 4
+
+            //1 2 3
+            //4 5 6
+            //7 8 9
+
+            int[,] r1 = new int[2, 3] { { 1, 2, 3 }, { 4, 5, 6 } };
+            int[,] r2 = { { 1, 2, 3 }, { 4, 5, 6 } };
+
+            for (int i = 0; i < r2.GetLength(0); i++)
+            {
+                for (int j = 0; j < r2.GetLength(1); j++)
+                {
+                    Console.Write($"{r2[i, j]} ");
+                }
+                Console.WriteLine();
+            }
+        }
         static void StackQueueDemo()
         {
             var stack = new Stack<int>();
