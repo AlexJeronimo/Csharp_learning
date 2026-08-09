@@ -25,4 +25,13 @@ namespace D_OOP
             Console.WriteLine($"x={x}; y={y}");
         }
     }
+
+    public struct EvilStruct
+    {
+        public int X;
+        public int Y;
+
+        public PointRef PointRef;
+
+    }
 }

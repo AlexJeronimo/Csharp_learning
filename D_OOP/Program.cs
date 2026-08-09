@@ -62,30 +62,45 @@
             //Console.WriteLine("After c1 speed increased");
             //Console.WriteLine($"c1.Speed={c1.PrintSpeed()}. c2.Speed={c2.PrintSpeed()}");
 
-            Console.WriteLine("Struct");
-            PointVal a; // same as Point a = newPointVal();
-            
-            a.x = 3;
-            a.y = 5;
+            //Console.WriteLine("Struct");
+            //PointVal a; // same as Point a = newPointVal();
 
-            PointVal b;
-            b.x = 7;
-            b.y = 10;
+            //a.x = 3;
+            //a.y = 5;
 
-            a.LogValue();
-            b.LogValue();
+            //PointVal b;
+            //b.x = 7;
+            //b.y = 10;
 
-            Console.WriteLine("Class");
-            PointRef c = new PointRef();
-            c.x = 3;
-            c.y = 5;
+            //a.LogValue();
+            //b.LogValue();
 
-            PointRef d = c;
-            d.x = 7;
-            d.y = 10;
+            //Console.WriteLine("Class");
+            //PointRef c = new PointRef();
+            //c.x = 3;
+            //c.y = 5;
 
-            c.LogValue();
-            d.LogValue();
+            //PointRef d = c;
+            //d.x = 7;
+            //d.y = 10;
+
+            //c.LogValue();
+            //d.LogValue();
+
+            EvilStruct es1 = new EvilStruct();
+            es1.PointRef = new PointRef() { x = 1, y = 2};
+            //es1.PointRef.x = 1;
+            //es1.PointRef.y = 2;
+            EvilStruct es2 = es1;
+
+            Console.WriteLine($"es1.PointRef.X={es1.PointRef.x}, es1.Pointref.Y={es1.PointRef.y}");
+            Console.WriteLine($"es2.PointRef.X={es2.PointRef.x}, es2.Pointref.Y={es2.PointRef.y}");
+
+            es2.PointRef.x = 42;
+            es2.PointRef.y = 45;
+
+            Console.WriteLine($"es1.PointRef.X={es1.PointRef.x}, es1.Pointref.Y={es1.PointRef.y}");
+            Console.WriteLine($"es2.PointRef.X={es2.PointRef.x}, es2.Pointref.Y={es2.PointRef.y}");
         }
     }
 }
