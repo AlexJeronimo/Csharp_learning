@@ -4,7 +4,8 @@
     {
         private static void Main(string[] args)
         {
-            
+            var result = RomanNumeral.Parse("XCIX");
+            Console.WriteLine(result);
         }
         static void NonStandardArrayIndex()
         {

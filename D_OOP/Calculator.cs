@@ -16,5 +16,21 @@ namespace D_OOP
         {
             return 0.5 * b * h;
         }
+
+        public double GetTriangleArea(double ab, double ac, int alpha)
+        {
+            double rads = alpha + Math.PI / 180;
+            return 0.5 * ab * ac * Math.Sin(rads);
+        }
+
+        public double Average(int[] numbers)
+        {
+            int sum = 0;
+            foreach (int n in numbers)
+            {
+                sum += n;
+            }
+            return (double)sum / numbers.Length;
+        }
     }
 }
