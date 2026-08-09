@@ -6,6 +6,17 @@ namespace D_OOP
 {
     public class Calculator
     {
+        public bool TryDivide(double divisible, double divisor, out double result)
+        {
+            result = 0;
+            if(divisor == 0)
+            {
+                return false;
+            }
+            result = divisible / divisor;
+            return true;
+        }
+
         public double GetTriangleArea(double ab, double bc, double ac)
         {
             double p = (ab + bc + ac) / 2;

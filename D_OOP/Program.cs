@@ -11,7 +11,18 @@
             //Console.WriteLine(c.Health);
 
 
-            //Calculator calc = new Calculator();
+            Calculator calc = new Calculator();
+
+            if(calc.TryDivide(10, 2, out double result))
+            {
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine("Failed to divide");
+            }
+            Console.ReadLine();
+
             //double area1 = calc.GetTriangleArea(2, 8);
             //double area2 = calc.GetTriangleArea(20, 21, 28);
 
