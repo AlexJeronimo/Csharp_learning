@@ -29,8 +29,8 @@
             //Console.WriteLine(number);
 
             string line = Console.ReadLine();
-            int number;
-            bool wasParsed = int.TryParse(line, out number);
+            //int number;
+            bool wasParsed = int.TryParse(line, out int number);
             if (wasParsed)
             {
                 Console.WriteLine(number);
