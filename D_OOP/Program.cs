@@ -87,20 +87,52 @@
             //c.LogValue();
             //d.LogValue();
 
-            EvilStruct es1 = new EvilStruct();
-            es1.PointRef = new PointRef() { x = 1, y = 2};
-            //es1.PointRef.x = 1;
-            //es1.PointRef.y = 2;
-            EvilStruct es2 = es1;
+            //EvilStruct es1 = new EvilStruct();
+            //es1.PointRef = new PointRef() { x = 1, y = 2};
+            ////es1.PointRef.x = 1;
+            ////es1.PointRef.y = 2;
+            //EvilStruct es2 = es1;
 
-            Console.WriteLine($"es1.PointRef.X={es1.PointRef.x}, es1.Pointref.Y={es1.PointRef.y}");
-            Console.WriteLine($"es2.PointRef.X={es2.PointRef.x}, es2.Pointref.Y={es2.PointRef.y}");
+            //Console.WriteLine($"es1.PointRef.X={es1.PointRef.x}, es1.Pointref.Y={es1.PointRef.y}");
+            //Console.WriteLine($"es2.PointRef.X={es2.PointRef.x}, es2.Pointref.Y={es2.PointRef.y}");
 
-            es2.PointRef.x = 42;
-            es2.PointRef.y = 45;
+            //es2.PointRef.x = 42;
+            //es2.PointRef.y = 45;
 
-            Console.WriteLine($"es1.PointRef.X={es1.PointRef.x}, es1.Pointref.Y={es1.PointRef.y}");
-            Console.WriteLine($"es2.PointRef.X={es2.PointRef.x}, es2.Pointref.Y={es2.PointRef.y}");
+            //Console.WriteLine($"es1.PointRef.X={es1.PointRef.x}, es1.Pointref.Y={es1.PointRef.y}");
+            //Console.WriteLine($"es2.PointRef.X={es2.PointRef.x}, es2.Pointref.Y={es2.PointRef.y}");
+
+            var list  = new List<int>();
+            AddNumbers(list);
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine();
+
+            int a = 1;
+            int b = 2;
+            Swap(ref a, ref b);
+
+            Console.WriteLine($"a={a}, b={b}");
+        }
+
+        static void Swap(ref int a, ref int b)
+        {
+            Console.WriteLine($"Original a={a}, b={b}");
+            int tmp = a;
+            a = b;
+            b = tmp;
+            Console.WriteLine($"Swapped a={a}, b={b}");
+        }
+
+        static void AddNumbers(List<int> numbers)
+        {
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
         }
     }
 }
