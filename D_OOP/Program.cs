@@ -102,21 +102,39 @@
             //Console.WriteLine($"es1.PointRef.X={es1.PointRef.x}, es1.Pointref.Y={es1.PointRef.y}");
             //Console.WriteLine($"es2.PointRef.X={es2.PointRef.x}, es2.Pointref.Y={es2.PointRef.y}");
 
-            var list  = new List<int>();
-            AddNumbers(list);
+            //var list  = new List<int>();
+            //AddNumbers(list);
 
-            foreach (var item in list)
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine();
+
+            //int a = 1;
+            //int b = 2;
+            //Swap(ref a, ref b);
+
+            //Console.WriteLine($"a={a}, b={b}");
+
+            PointVal? pv = null;
+            if (pv.HasValue)
             {
-                Console.WriteLine(item);
+                PointVal pv2 = pv.Value;
+                Console.WriteLine(pv2.x);
+                Console.WriteLine(pv.Value.x);
+            }
+            else
+            {
+                //
             }
 
-            Console.WriteLine();
-
-            int a = 1;
-            int b = 2;
-            Swap(ref a, ref b);
-
-            Console.WriteLine($"a={a}, b={b}");
+            PointVal ps3 = pv.GetValueOrDefault();
+            
+            
+            PointRef c = null;
+            Console.WriteLine(c.x); //NullReferenceException
         }
 
         static void Swap(ref int a, ref int b)
