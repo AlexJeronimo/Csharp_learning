@@ -2,4 +2,5 @@
   <Project Path="A_Basics.csproj" />
   <Project Path="B_ControlFlow/B_ControlFlow.csproj" Id="011ab1de-3ca2-45ea-96e9-f4fc9027b401" />
   <Project Path="C_ArraysCollections/C_ArraysCollections.csproj" Id="cf02730a-295b-4e03-85f2-975f8804aa43" />
+  <Project Path="D_OOP/D_OOP.csproj" Id="d0cad009-2ac5-476f-a90c-14b83ca2cc43" />
 </Solution>
