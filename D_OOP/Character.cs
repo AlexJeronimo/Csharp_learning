@@ -28,7 +28,7 @@ namespace D_OOP
             Health -= damage;
             //health -= damage
         }
-        
+
         //value - can be reproduced as 2 methods, value more preferable as methods for Get\Set operations
         //public int Health
         //{
@@ -50,5 +50,17 @@ namespace D_OOP
         //{
         //    health = value;
         //}
+
+        private static int speed = 10;
+
+        public int PrintSpeed()
+        {
+            return speed;
+        }
+
+        public void IncreaseSpeed()
+        {
+            speed += 10;
+        }
     }
 }
