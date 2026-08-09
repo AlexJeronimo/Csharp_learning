@@ -24,6 +24,21 @@
             //double avg2 = calc.Average2(1, 2, 3, 4);
             //Console.WriteLine(avg2);
 
+            Console.WriteLine("Enter a number, please.");
+            //int number = int.Parse(Console.ReadLine());
+            //Console.WriteLine(number);
+
+            string line = Console.ReadLine();
+            int number;
+            bool wasParsed = int.TryParse(line, out number);
+            if (wasParsed)
+            {
+                Console.WriteLine(number);
+            }
+            else
+            {
+                Console.WriteLine("Failed to parse");
+            }
         }
     }
 }
