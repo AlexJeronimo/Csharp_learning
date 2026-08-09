@@ -30,10 +30,17 @@ namespace D_OOP
             return 0.5 * b * h;
         }
 
-        public static double GetTriangleArea(double ab, double ac, int alpha)
+        public static double GetTriangleArea(double ab, double ac, int alpha, bool isInRadians = false)
         {
-            double rads = alpha + Math.PI / 180;
-            return 0.5 * ab * ac * Math.Sin(rads);
+            if (isInRadians)
+            {
+                return 0.5 * ab * ac * Math.Sin(alpha);
+            }
+            else
+            {
+                double rads = alpha + Math.PI / 180;
+                return 0.5 * ab * ac * Math.Sin(rads);
+            }    
         }
 
         public static double Average(int[] numbers)

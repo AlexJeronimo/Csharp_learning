@@ -54,13 +54,38 @@
             //double avg = Calculator.Average2(1, 2, 3, 4, 5);
             //Console.WriteLine(avg);
 
-            Character c1 = new Character();
-            Character c2 = new Character();
+            //Character c1 = new Character();
+            //Character c2 = new Character();
 
-            Console.WriteLine($"c1.Speed={c1.PrintSpeed()}. c2.Speed={c2.PrintSpeed()}");
-            c1.IncreaseSpeed();
-            Console.WriteLine("After c1 speed increased");
-            Console.WriteLine($"c1.Speed={c1.PrintSpeed()}. c2.Speed={c2.PrintSpeed()}");
+            //Console.WriteLine($"c1.Speed={c1.PrintSpeed()}. c2.Speed={c2.PrintSpeed()}");
+            //c1.IncreaseSpeed();
+            //Console.WriteLine("After c1 speed increased");
+            //Console.WriteLine($"c1.Speed={c1.PrintSpeed()}. c2.Speed={c2.PrintSpeed()}");
+
+            Console.WriteLine("Struct");
+            PointVal a; // same as Point a = newPointVal();
+            
+            a.x = 3;
+            a.y = 5;
+
+            PointVal b;
+            b.x = 7;
+            b.y = 10;
+
+            a.LogValue();
+            b.LogValue();
+
+            Console.WriteLine("Class");
+            PointRef c = new PointRef();
+            c.x = 3;
+            c.y = 5;
+
+            PointRef d = c;
+            d.x = 7;
+            d.y = 10;
+
+            c.LogValue();
+            d.LogValue();
         }
     }
 }
