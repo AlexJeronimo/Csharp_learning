@@ -4,6 +4,19 @@ using System.Text;
 
 namespace D_OOP
 {
+    public class Point2D
+    {
+        private int x;
+        private int y;
+
+        public Point2D(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+
+        }
+    }
+
     public class Character //by default class is 'internal', to use externally need to set as 'public'
     {
         //public - will be accessed from outside, not only from project but from entyre solution projects. In extrenal project should be referenced to this project
@@ -61,6 +74,15 @@ namespace D_OOP
         public void IncreaseSpeed()
         {
             speed += 10;
+        }
+
+        public string Race { get; private set; }
+        public int Armor { get; private set; }
+
+        public Character(string race, int armor)
+        {
+            Race = race;
+            Armor = armor;
         }
     }
 }

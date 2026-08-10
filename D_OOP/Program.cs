@@ -118,23 +118,26 @@
 
             //Console.WriteLine($"a={a}, b={b}");
 
-            PointVal? pv = null;
-            if (pv.HasValue)
-            {
-                PointVal pv2 = pv.Value;
-                Console.WriteLine(pv2.x);
-                Console.WriteLine(pv.Value.x);
-            }
-            else
-            {
-                //
-            }
+            //PointVal? pv = null;
+            //if (pv.HasValue)
+            //{
+            //    PointVal pv2 = pv.Value;
+            //    Console.WriteLine(pv2.x);
+            //    Console.WriteLine(pv.Value.x);
+            //}
+            //else
+            //{
+            //    //
+            //}
 
-            PointVal ps3 = pv.GetValueOrDefault();
-            
-            
-            PointRef c = null;
-            Console.WriteLine(c.x); //NullReferenceException
+            //PointVal ps3 = pv.GetValueOrDefault();
+
+
+            //PointRef c = null;
+            //Console.WriteLine(c.x); //NullReferenceException
+
+            Character c = new Character("Elf");
+            Console.WriteLine(c.Race);
         }
 
         static void Swap(ref int a, ref int b)
