@@ -79,10 +79,15 @@ namespace D_OOP
         public string Race { get; private set; }
         public int Armor { get; private set; }
 
-        public Character(string race, int armor)
+        public Character(string race, int armor = 30)
         {
             Race = race;
             Armor = armor;
+        }
+
+        public Character()
+        {
+            
         }
     }
 }

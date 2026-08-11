@@ -138,6 +138,23 @@
 
             Character c = new Character("Elf");
             Console.WriteLine(c.Race);
+
+            Character c2 = new Character();
+
+            Student student = new Student("Qwertysh", new DateTime(2000, 10, 5));
+            Student student2 = student;
+            Student student3 = new Student(student);
+
+            student.SetLastName("######");
+
+            student.Print();
+
+            Console.WriteLine();
+
+            student2.Print();
+            Console.WriteLine();
+
+            student3.Print();
         }
 
         static void Swap(ref int a, ref int b)
