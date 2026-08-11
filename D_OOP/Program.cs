@@ -155,6 +155,13 @@
             Console.WriteLine();
 
             student3.Print();
+
+
+            Point p = new Point();
+
+            p.Y = 10;
+
+            int y = p.Y;
         }
 
         static void Swap(ref int a, ref int b)
