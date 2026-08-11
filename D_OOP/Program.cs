@@ -8,7 +8,24 @@
 
         }
 
+        static void Do(Shape shape)
+        {
+            shape.Draw();
+        }
 
+        static void PolimorphismDemo()
+        {
+            Shape[] shapes = new Shape[2];
+            shapes[0] = new Triangle(10, 20, 30);
+            shapes[1] = new Rectangle(5, 10);
+
+            foreach (Shape shape in shapes)
+            {
+                shape.Draw();
+                Console.WriteLine(shape.Perimeter());
+                Console.WriteLine(shape.Area());
+            }
+        }
         static void InheritanceDemo()
         {
             ModelXTerminal terminal = new ModelXTerminal("123");
