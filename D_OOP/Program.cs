@@ -4,6 +4,18 @@
     {
         private static void Main(string[] args)
         {
+            
+
+        }
+
+
+        static void InheritanceDemo()
+        {
+            ModelXTerminal terminal = new ModelXTerminal("123");
+            terminal.Connect();
+        }
+        static void ClassesMethods()
+        {
             //Character c = new Character();
 
             //c.Hit(120);
