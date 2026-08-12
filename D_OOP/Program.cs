@@ -4,8 +4,13 @@
     {
         private static void Main(string[] args)
         {
+            List<object> list = new List<object>() { 1, 2, 3 };
+
             IBaseCollection collection = new BaseList(4);
             collection.Add(1);
+            collection.Clear();
+
+            collection.AddRange(list);
 
         }
 

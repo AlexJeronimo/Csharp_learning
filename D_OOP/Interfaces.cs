@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace D_OOP
@@ -8,8 +9,24 @@ namespace D_OOP
     {
         void Add(object obj);
         void Remove(object obj);
+
+        public virtual void Clear()
+        {
+            Console.WriteLine("Default implementation in Interface not implemented\\overrided in class");
+        }
     }
 
+
+    public static class BaseCollectionExtension
+    {
+        public static void AddRange(this IBaseCollection collection, IEnumerable<object> objects)
+        {
+            foreach (var item in objects)
+            {
+                collection.Add(item);
+            }
+        }
+    }
     public class BaseList : IBaseCollection
     {
         private object[] items;
