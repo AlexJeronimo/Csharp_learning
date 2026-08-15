@@ -35,3 +35,5 @@ bool
 *
 %
 ```
+
+/// - to add some description to methods, IDE will generate some structure, fill it with your description what method do, etc.
