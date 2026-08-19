@@ -4,6 +4,32 @@
     {
         private static void Main(string[] args)
         {
+            
+        }
+
+        static void Enums()
+        {
+            Character c = new Character(Race.Terrain);
+        }
+
+        static void ProblemOfRepresentatives()
+        {
+            //Rect rect = new Rect() { Height = 2, Width = 5 };
+            //int rectArtea = AreaCalculator.CalcSquare(rect);
+            //Console.WriteLine(rectArtea);
+
+            //Rect square = new Square() { Height = 2, Width = 10 };
+            //int squareArea = AreaCalculator.CalcSquare(square);
+            //Console.WriteLine(squareArea);
+
+            IShape rect = new Rect() { Height = 2, Width = 5 };
+            IShape square = new Square() { sideLength = 2 };
+            Console.WriteLine(rect.CalcSquare());
+            Console.WriteLine(square.CalcSquare());
+        }
+
+        static void CallingThrouthInterfacesDemo()
+        {
             List<object> list = new List<object>() { 1, 2, 3 };
 
             IBaseCollection collection = new BaseList(4);
@@ -11,7 +37,6 @@
             collection.Clear();
 
             collection.AddRange(list);
-
         }
 
         static void Do(Shape shape)

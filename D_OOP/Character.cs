@@ -76,18 +76,51 @@ namespace D_OOP
             speed += 10;
         }
 
-        public string Race { get; private set; }
+        //public string Race { get; private set; }
+        public Race Race { get; private set; }
         public int Armor { get; private set; }
 
-        public Character(string race, int armor = 30)
+        public Character(Race race)
+        {
+            Race = race;
+            //Armor = (int)race;
+            switch (race)
+            {
+                case Race.Elf:
+                    Armor = 30;
+                    break;
+                case Race.Orc:
+                    Armor = 50;
+                    break;
+                case Race.Terrain:
+                    Armor = 12;
+                    break;
+                default:
+                    throw new ArgumentException("Unknown race.");                   
+            }
+            
+            //if(race == Race.Terrain)
+            //{
+            //    Armor = 12;
+            //}
+            //else if (race == Race.Elf)
+            //{
+            //    Armor = 30;
+            //}
+            //else if(race == Race.Orc)
+            //{
+            //    Armor = 50;
+            //}
+            //else
+            //{
+            //    throw new ArgumentException("Unknown race.");
+            //}
+        }
+
+        public Character(Race race, int armor)
         {
             Race = race;
             Armor = armor;
-        }
-
-        public Character()
-        {
-            
         }
     }
 }
