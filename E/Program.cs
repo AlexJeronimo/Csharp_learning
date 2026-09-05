@@ -29,6 +29,12 @@ namespace E
         {
             return a - b;
         }
+
+        static double Pow(double a, double b)
+        {
+            return Math.Pow(a, );
+        }
+
         static int Mul(int a, int b)
         {
             return a * b;
