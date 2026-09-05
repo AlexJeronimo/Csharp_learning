@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Channels;
 
 
 namespace E
@@ -9,6 +10,7 @@ namespace E
         static void Main()
         {
             Console.WriteLine("Hey");
+            Console.WriteLine("data from main not existed in dev at this time");
         }
 
         static int Addition(int a, int b)
@@ -39,5 +41,6 @@ namespace E
         {
             return a * b;
         }
+       
     }
 }
