@@ -4,4 +4,5 @@
   <Project Path="C_ArraysCollections/C_ArraysCollections.csproj" Id="cf02730a-295b-4e03-85f2-975f8804aa43" />
   <Project Path="D_OOP/D_OOP.csproj" Id="d0cad009-2ac5-476f-a90c-14b83ca2cc43" />
   <Project Path="E/E.csproj" Id="9bd94a86-0b81-4f5d-a8f4-e66841beef2c" />
+  <Project Path="F/F.csproj" Id="47fd2507-7d8b-4869-a905-e87604e1e61e" />
 </Solution>
