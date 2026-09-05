@@ -8,6 +8,7 @@ namespace E
         static void Main()
         {
             Console.WriteLine("Hey");
+            Console.WriteLine();
         }
     }
 }
