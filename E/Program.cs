@@ -25,10 +25,9 @@ namespace E
             return 0;
         }
 
-        static int Sub(int operand1, int operand2)
+        static int Sub(int a, int b)
         {
-            Console.WriteLine("Method from Dev branch");
-            return operand1 + operand1;
+            return a - b;
         }
 
     }
