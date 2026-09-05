@@ -24,5 +24,10 @@ namespace E
             return 0;
         }
 
+        static int Sub(int a, int b)
+        {
+            return a - b;
+        } 
+
     }
 }
