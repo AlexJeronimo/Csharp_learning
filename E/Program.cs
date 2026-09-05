@@ -7,7 +7,7 @@ namespace E
     {
         static void Main()
         {
-            Console.WriteLine("Hey");
+            
         }
     }
 }
