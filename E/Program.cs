@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 
 namespace E
@@ -22,6 +23,12 @@ namespace E
                 return a / b;
             }
             return 0;
+        }
+
+        static int Sub(int operand1, int operand2)
+        {
+            Console.WriteLine("Method from Dev branch");
+            return operand1 + operand1;
         }
 
     }
